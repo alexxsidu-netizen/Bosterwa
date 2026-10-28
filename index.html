@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070812">
+<title>WA CHANNEL BOOSTER</title>
+<style>
+:root{--bg:#070812;--panel:#0e1020;--panel2:#141733;--line:#252a4a;--tx:#eef0ff;--mu:#8e94b8;--a:#8b5cf6;--a2:#22d3ee;--ok:#34d399;--err:#fb7185;--grad:linear-gradient(135deg,#8b5cf6 0%,#6366f1 50%,#22d3ee 100%)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;background:radial-gradient(700px 420px at 85% -5%,rgba(139,92,246,.28),transparent 60%),radial-gradient(600px 400px at -10% 25%,rgba(34,211,238,.14),transparent 60%),var(--bg);background-attachment:fixed}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:12px 16px;padding-top:calc(12px + env(safe-area-inset-top,0px));background:rgba(7,8,18,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.logo{width:36px;height:36px;border-radius:11px;background:var(--grad);display:grid;place-items:center;font-weight:900;color:#fff;box-shadow:0 6px 20px rgba(139,92,246,.45)}
+.brand{font-weight:800;letter-spacing:.6px}.brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+main{max-width:500px;margin:0 auto;padding:22px 16px 40px}
+.eyebrow{font:600 12px ui-monospace,monospace;letter-spacing:3px;color:var(--a2);text-transform:uppercase}
+h1{font-size:28px;margin:6px 0 8px;letter-spacing:-.5px}
+.sub{color:var(--mu);line-height:1.6;margin:0 0 20px}
+.card{background:linear-gradient(180deg,rgba(26,30,66,.7),rgba(14,16,32,.85));border:1px solid var(--line);border-radius:22px;padding:20px;margin-bottom:18px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+label{display:block;font-weight:700;font-size:14px;margin:16px 0 8px}
+input[type=text],input[type=number]{width:100%;padding:15px 16px;border-radius:14px;border:1px solid var(--line);background:#080918;color:var(--tx);font-size:16px;outline:none}
+input:focus{border-color:var(--a);box-shadow:0 0 0 3px rgba(139,92,246,.2)}
+.btn{display:block;width:100%;padding:16px;border-radius:14px;border:0;background:var(--grad);color:#fff;font-weight:800;font-size:16px;cursor:pointer;margin-top:20px;box-shadow:0 8px 22px rgba(99,102,241,.35)}
+.btn:active{transform:scale(.98)}.btn:disabled{opacity:.4}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.chip{padding:13px 0;border-radius:14px;border:1px solid var(--line);background:var(--panel2);color:var(--tx);font-weight:700;cursor:pointer;text-align:center}
+.hint{color:var(--mu);font-size:13px;line-height:1.5;margin-top:8px}
+.msg{font:13px ui-monospace,monospace;margin-top:14px;word-break:break-word;line-height:1.5;padding:12px;border-radius:12px;display:none}
+.msg.ok{color:var(--ok);background:rgba(52,211,153,.1);display:block;border:1px solid rgba(52,211,153,.2)}
+.msg.err{color:var(--err);background:rgba(251,113,133,.1);display:block;border:1px solid rgba(251,113,133,.2)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="logo">W</div>
+  <div class="brand">WA <b>BOOSTER</b></div>
+</header>
+
+<main>
+  <div class="eyebrow">Direct Injector</div>
+  <h1>Suntik Views WA</h1>
+  <p class="sub">Tempel link saluran WhatsApp dan tentukan jumlah views.</p>
+
+  <div class="card">
+    <label style="margin-top:0">Link Saluran WhatsApp</label>
+    <input type="text" id="lnk" placeholder="https://whatsapp.com/channel/..." autocapitalize="off" autocomplete="off">
+    <div class="hint">Pastikan saluran WhatsApp bersifat publik.</div>
+
+    <label>Jumlah Views</label>
+    <div class="chips">
+      <div class="chip" onclick="setQty(100)">100</div>
+      <div class="chip" onclick="setQty(500)">500</div>
+      <div class="chip" onclick="setQty(1000)">1000</div>
+      <div class="chip" onclick="setQty(5000)">5000</div>
+    </div>
+    <input type="number" id="qty" inputmode="numeric" placeholder="atau ketik jumlah sendiri" style="margin-top:10px">
+
+    <button class="btn" id="btnSend">⇧ Suntik Sekarang</button>
+    <div class="msg" id="msgBox"></div>
+  </div>
+</main>
+
+<script>
+const CONFIG = {
+  apiUrl: 'https://domain-panel-smm.com/api/v2', // Masukkan URL API Provider SMM
+  apiKey: 'ISI_API_KEY_KAMU_DI_SINI',            // Masukkan API Key Provider SMM
+  serviceId: '1234'                             // Masukkan ID Layanan Views WhatsApp
+};
+
+function setQty(val) {
+  document.getElementById('qty').value = val;
+}
+
+function showMsg(text, isOk) {
+  const box = document.getElementById('msgBox');
+  box.textContent = text;
+  box.className = 'msg ' + (isOk ? 'ok' : 'err');
+}
+
+document.getElementById('btnSend').onclick = async function() {
+  const link = document.getElementById('lnk').value.trim();
+  const qty = parseInt(document.getElementById('qty').value);
+  const btn = document.getElementById('btnSend');
+
+  if (!link || !/^https:\/\/(www\.)?whatsapp\.com\/channel\//.test(link)) {
+    return showMsg('Masukkan link saluran WhatsApp yang valid!', false);
+  }
+  if (!qty || qty < 10) {
+    return showMsg('Masukkan jumlah views minimal 10!', false);
+  }
+
+  btn.disabled = true;
+  showMsg('Memproses suntikan views...', true);
+
+  try {
+    const formData = new FormData();
+    formData.append('key', CONFIG.apiKey);
+    formData.append('action', 'add');
+    formData.append('service', CONFIG.serviceId);
+    formData.append('link', link);
+    formData.append('quantity', qty);
+
+    const res = await fetch(CONFIG.apiUrl, {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await res.json();
+
+    if (data.order) {
+      showMsg('✓ Sukses! Views berhasil disuntikkan.', true);
+      document.getElementById('lnk').value = '';
+      document.getElementById('qty').value = '';
+    } else if (data.error) {
+      showMsg('✗ Gagal: ' + data.error, false);
+    } else {
+      showMsg('✗ Terjadi kesalahan pada server provider.', false);
+    }
+  } catch (err) {
+    showMsg('✗ Gagal terhubung ke provider SMM.', false);
+  } finally {
+    btn.disabled = false;
+  }
+};
+</script>
+</body>
+</html>
