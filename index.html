@@ -2,50 +2,104 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#070812">
-<title>WA CHANNEL BOOSTER</title>
+<title>WA CHANNEL BOOSTER PRO</title>
 <style>
-:root{--bg:#070812;--panel:#0e1020;--panel2:#141733;--line:#252a4a;--tx:#eef0ff;--mu:#8e94b8;--a:#8b5cf6;--a2:#22d3ee;--ok:#34d399;--err:#fb7185;--grad:linear-gradient(135deg,#8b5cf6 0%,#6366f1 50%,#22d3ee 100%)}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;background:radial-gradient(700px 420px at 85% -5%,rgba(139,92,246,.28),transparent 60%),radial-gradient(600px 400px at -10% 25%,rgba(34,211,238,.14),transparent 60%),var(--bg);background-attachment:fixed}
-.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:12px 16px;padding-top:calc(12px + env(safe-area-inset-top,0px));background:rgba(7,8,18,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.logo{width:36px;height:36px;border-radius:11px;background:var(--grad);display:grid;place-items:center;font-weight:900;color:#fff;box-shadow:0 6px 20px rgba(139,92,246,.45)}
-.brand{font-weight:800;letter-spacing:.6px}.brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-main{max-width:500px;margin:0 auto;padding:22px 16px 40px}
-.eyebrow{font:600 12px ui-monospace,monospace;letter-spacing:3px;color:var(--a2);text-transform:uppercase}
-h1{font-size:28px;margin:6px 0 8px;letter-spacing:-.5px}
-.sub{color:var(--mu);line-height:1.6;margin:0 0 20px}
-.card{background:linear-gradient(180deg,rgba(26,30,66,.7),rgba(14,16,32,.85));border:1px solid var(--line);border-radius:22px;padding:20px;margin-bottom:18px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-label{display:block;font-weight:700;font-size:14px;margin:16px 0 8px}
-input[type=text],input[type=number]{width:100%;padding:15px 16px;border-radius:14px;border:1px solid var(--line);background:#080918;color:var(--tx);font-size:16px;outline:none}
-input:focus{border-color:var(--a);box-shadow:0 0 0 3px rgba(139,92,246,.2)}
-.btn{display:block;width:100%;padding:16px;border-radius:14px;border:0;background:var(--grad);color:#fff;font-weight:800;font-size:16px;cursor:pointer;margin-top:20px;box-shadow:0 8px 22px rgba(99,102,241,.35)}
-.btn:active{transform:scale(.98)}.btn:disabled{opacity:.4}
-.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.chip{padding:13px 0;border-radius:14px;border:1px solid var(--line);background:var(--panel2);color:var(--tx);font-weight:700;cursor:pointer;text-align:center}
-.hint{color:var(--mu);font-size:13px;line-height:1.5;margin-top:8px}
-.msg{font:13px ui-monospace,monospace;margin-top:14px;word-break:break-word;line-height:1.5;padding:12px;border-radius:12px;display:none}
-.msg.ok{color:var(--ok);background:rgba(52,211,153,.1);display:block;border:1px solid rgba(52,211,153,.2)}
-.msg.err{color:var(--err);background:rgba(251,113,133,.1);display:block;border:1px solid rgba(251,113,133,.2)}
+:root {
+  --bg: #070812;
+  --panel: #0e1020;
+  --panel2: #141733;
+  --line: #252a4a;
+  --tx: #eef0ff;
+  --mu: #8e94b8;
+  --a: #8b5cf6;
+  --a2: #22d3ee;
+  --ok: #34d399;
+  --err: #fb7185;
+  --grad: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #22d3ee 100%);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  margin: 0; color: var(--tx);
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(700px 420px at 85% -5%, rgba(139,92,246,.28), transparent 60%),
+              radial-gradient(600px 400px at -10% 25%, rgba(34,211,238,.14), transparent 60%),
+              var(--bg);
+  background-attachment: fixed;
+}
+.top {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 18px;
+  background: rgba(7,8,18,.8);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.logo {
+  width: 38px; height: 38px; border-radius: 12px;
+  background: var(--grad); display: grid; place-items: center;
+  font-weight: 900; color: #fff; box-shadow: 0 6px 20px rgba(139,92,246,.45);
+}
+.brand { font-weight: 800; letter-spacing: .6px; font-size: 16px; }
+.brand b { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+main { max-width: 520px; margin: 0 auto; padding: 24px 16px 40px; }
+.eyebrow { font: 600 12px ui-monospace, monospace; letter-spacing: 3px; color: var(--a2); text-transform: uppercase; }
+h1 { font-size: 28px; margin: 6px 0 8px; letter-spacing: -.5px; }
+.sub { color: var(--mu); line-height: 1.6; margin: 0 0 20px; font-size: 14px; }
+.card {
+  background: linear-gradient(180deg, rgba(26,30,66,.7), rgba(14,16,32,.85));
+  border: 1px solid var(--line); border-radius: 22px; padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+label { display: block; font-weight: 700; font-size: 14px; margin: 16px 0 8px; }
+input[type=text], input[type=number] {
+  width: 100%; padding: 15px 16px; border-radius: 14px;
+  border: 1px solid var(--line); background: #080918; color: var(--tx);
+  font-size: 15px; outline: none; transition: .2s;
+}
+input:focus { border-color: var(--a); box-shadow: 0 0 0 3px rgba(139,92,246,.25); }
+.btn {
+  display: block; width: 100%; padding: 16px; border-radius: 14px; border: 0;
+  background: var(--grad); color: #fff; font-weight: 800; font-size: 16px;
+  cursor: pointer; margin-top: 22px; box-shadow: 0 8px 22px rgba(99,102,241,.35);
+  transition: transform .1s;
+}
+.btn:active { transform: scale(.98); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.chip {
+  padding: 12px 0; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--panel2); color: var(--tx); font-weight: 700;
+  cursor: pointer; text-align: center; font-size: 14px; transition: .2s;
+}
+.chip:hover { border-color: var(--a); background: rgba(139,92,246,.15); }
+.hint { color: var(--mu); font-size: 13px; line-height: 1.5; margin-top: 8px; }
+.msg {
+  font: 13px ui-monospace, monospace; margin-top: 16px; word-break: break-word;
+  line-height: 1.5; padding: 14px; border-radius: 14px; display: none;
+}
+.msg.ok { color: var(--ok); background: rgba(52,211,153,.12); display: block; border: 1px solid rgba(52,211,153,.25); }
+.msg.err { color: var(--err); background: rgba(251,113,133,.12); display: block; border: 1px solid rgba(251,113,133,.25); }
 </style>
 </head>
 <body>
 
 <header class="top">
   <div class="logo">W</div>
-  <div class="brand">WA <b>BOOSTER</b></div>
+  <div class="brand">WA <b>BOOSTER PRO</b></div>
 </header>
 
 <main>
   <div class="eyebrow">Direct Injector</div>
   <h1>Suntik Views WA</h1>
-  <p class="sub">Tempel link saluran WhatsApp dan tentukan jumlah views.</p>
+  <p class="sub">Masukkan link saluran WhatsApp publik milikmu untuk menyuntikkan views secara otomatis.</p>
 
   <div class="card">
     <label style="margin-top:0">Link Saluran WhatsApp</label>
     <input type="text" id="lnk" placeholder="https://whatsapp.com/channel/..." autocapitalize="off" autocomplete="off">
-    <div class="hint">Pastikan saluran WhatsApp bersifat publik.</div>
+    <div class="hint">Pastikan saluran WhatsApp berstatus publik.</div>
 
     <label>Jumlah Views</label>
     <div class="chips">
@@ -56,16 +110,19 @@ input:focus{border-color:var(--a);box-shadow:0 0 0 3px rgba(139,92,246,.2)}
     </div>
     <input type="number" id="qty" inputmode="numeric" placeholder="atau ketik jumlah sendiri" style="margin-top:10px">
 
-    <button class="btn" id="btnSend">⇧ Suntik Sekarang</button>
+    <button class="btn" id="btnSend">⇧ Suntik Views Sekarang</button>
     <div class="msg" id="msgBox"></div>
   </div>
 </main>
 
 <script>
+// ==========================================
+// ISI DATA PANEL SMM MILIKMU DI SINI
+// ==========================================
 const CONFIG = {
-  apiUrl: 'https://domain-panel-smm.com/api/v2', // Masukkan URL API Provider SMM
-  apiKey: 'ISI_API_KEY_KAMU_DI_SINI',            // Masukkan API Key Provider SMM
-  serviceId: '1234'                             // Masukkan ID Layanan Views WhatsApp
+  apiUrl: 'https://domain-panel-smm-kamu.com/api/v2', // Ganti dengan URL API Panel SMM
+  apiKey: 'ISI_API_KEY_KAMU_DI_SINI',                  // Ganti dengan API Key akun Panel SMM
+  serviceId: '1234'                                   // Ganti dengan ID Layanan Views WA
 };
 
 function setQty(val) {
@@ -91,34 +148,40 @@ document.getElementById('btnSend').onclick = async function() {
   }
 
   btn.disabled = true;
-  showMsg('Memproses suntikan views...', true);
+  showMsg('⏳ Memproses dan menyuntikkan views...', true);
 
   try {
-    const formData = new FormData();
-    formData.append('key', CONFIG.apiKey);
-    formData.append('action', 'add');
-    formData.append('service', CONFIG.serviceId);
-    formData.append('link', link);
-    formData.append('quantity', qty);
+    const bodyData = new URLSearchParams();
+    bodyData.append('key', CONFIG.apiKey);
+    bodyData.append('action', 'add');
+    bodyData.append('service', CONFIG.serviceId);
+    bodyData.append('link', link);
+    bodyData.append('quantity', qty);
 
-    const res = await fetch(CONFIG.apiUrl, {
+    // Menggunakan CORS Proxy agar request tidak diblokir GitHub Pages / Browser
+    const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(CONFIG.apiUrl);
+
+    const res = await fetch(proxyUrl, {
       method: 'POST',
-      body: formData
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: bodyData.toString()
     });
 
     const data = await res.json();
 
     if (data.order) {
-      showMsg('✓ Sukses! Views berhasil disuntikkan.', true);
+      showMsg('✓ Sukses! Views berhasil disuntikkan. Order ID: ' + data.order, true);
       document.getElementById('lnk').value = '';
       document.getElementById('qty').value = '';
     } else if (data.error) {
-      showMsg('✗ Gagal: ' + data.error, false);
+      showMsg('✗ Gagal dari SMM: ' + data.error, false);
     } else {
-      showMsg('✗ Terjadi kesalahan pada server provider.', false);
+      showMsg('✗ Respon server provider tidak valid.', false);
     }
   } catch (err) {
-    showMsg('✗ Gagal terhubung ke provider SMM.', false);
+    showMsg('✗ Gagal terhubung ke SMM. Pastikan apiUrl, apiKey, & serviceId di CONFIG sudah benar!', false);
   } finally {
     btn.disabled = false;
   }
