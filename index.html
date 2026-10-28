@@ -1,191 +1,206 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<html lang="id"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#070812">
 <title>WA CHANNEL BOOSTER PRO</title>
 <style>
-:root {
-  --bg: #070812;
-  --panel: #0e1020;
-  --panel2: #141733;
-  --line: #252a4a;
-  --tx: #eef0ff;
-  --mu: #8e94b8;
-  --a: #8b5cf6;
-  --a2: #22d3ee;
-  --ok: #34d399;
-  --err: #fb7185;
-  --grad: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #22d3ee 100%);
-}
-* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-body {
-  margin: 0; color: var(--tx);
-  font-family: system-ui, -apple-system, sans-serif;
-  min-height: 100vh;
-  background: radial-gradient(700px 420px at 85% -5%, rgba(139,92,246,.28), transparent 60%),
-              radial-gradient(600px 400px at -10% 25%, rgba(34,211,238,.14), transparent 60%),
-              var(--bg);
-  background-attachment: fixed;
-}
-.top {
-  position: sticky; top: 0; z-index: 20;
-  display: flex; align-items: center; gap: 12px;
-  padding: 14px 18px;
-  background: rgba(7,8,18,.8);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-.logo {
-  width: 38px; height: 38px; border-radius: 12px;
-  background: var(--grad); display: grid; place-items: center;
-  font-weight: 900; color: #fff; box-shadow: 0 6px 20px rgba(139,92,246,.45);
-}
-.brand { font-weight: 800; letter-spacing: .6px; font-size: 16px; }
-.brand b { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-main { max-width: 520px; margin: 0 auto; padding: 24px 16px 40px; }
-.eyebrow { font: 600 12px ui-monospace, monospace; letter-spacing: 3px; color: var(--a2); text-transform: uppercase; }
-h1 { font-size: 28px; margin: 6px 0 8px; letter-spacing: -.5px; }
-.sub { color: var(--mu); line-height: 1.6; margin: 0 0 20px; font-size: 14px; }
-.card {
-  background: linear-gradient(180deg, rgba(26,30,66,.7), rgba(14,16,32,.85));
-  border: 1px solid var(--line); border-radius: 22px; padding: 22px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.3);
-}
-label { display: block; font-weight: 700; font-size: 14px; margin: 16px 0 8px; }
-input[type=text], input[type=number] {
-  width: 100%; padding: 15px 16px; border-radius: 14px;
-  border: 1px solid var(--line); background: #080918; color: var(--tx);
-  font-size: 15px; outline: none; transition: .2s;
-}
-input:focus { border-color: var(--a); box-shadow: 0 0 0 3px rgba(139,92,246,.25); }
-.btn {
-  display: block; width: 100%; padding: 16px; border-radius: 14px; border: 0;
-  background: var(--grad); color: #fff; font-weight: 800; font-size: 16px;
-  cursor: pointer; margin-top: 22px; box-shadow: 0 8px 22px rgba(99,102,241,.35);
-  transition: transform .1s;
-}
-.btn:active { transform: scale(.98); }
-.btn:disabled { opacity: .5; cursor: not-allowed; }
-.chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-.chip {
-  padding: 12px 0; border-radius: 12px; border: 1px solid var(--line);
-  background: var(--panel2); color: var(--tx); font-weight: 700;
-  cursor: pointer; text-align: center; font-size: 14px; transition: .2s;
-}
-.chip:hover { border-color: var(--a); background: rgba(139,92,246,.15); }
-.hint { color: var(--mu); font-size: 13px; line-height: 1.5; margin-top: 8px; }
-.msg {
-  font: 13px ui-monospace, monospace; margin-top: 16px; word-break: break-word;
-  line-height: 1.5; padding: 14px; border-radius: 14px; display: none;
-}
-.msg.ok { color: var(--ok); background: rgba(52,211,153,.12); display: block; border: 1px solid rgba(52,211,153,.25); }
-.msg.err { color: var(--err); background: rgba(251,113,133,.12); display: block; border: 1px solid rgba(251,113,133,.25); }
-</style>
-</head>
-<body>
+:root{--bg:#070812;--line:#252a4a;--tx:#eef0ff;--mu:#8e94b8;--ok:#34d399;--err:#fb7185;--grad:linear-gradient(135deg,#8b5cf6,#6366f1 50%,#22d3ee)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;color:var(--tx);font-family:system-ui,sans-serif;min-height:100vh;background:radial-gradient(700px 420px at 85% -5%,rgba(139,92,246,.28),transparent 60%),var(--bg);background-attachment:fixed}
+.top{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.logo{width:36px;height:36px;border-radius:11px;background:var(--grad);display:grid;place-items:center;font-weight:900}
+.brand{font-weight:800}
+.brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+main{max-width:520px;margin:0 auto;padding:18px 16px 40px}
+.card{background:linear-gradient(180deg,rgba(26,30,66,.7),rgba(14,16,32,.85));border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:16px}
+h2{font-size:17px;margin:0 0 12px}
+.eyebrow{font:600 11px ui-monospace,monospace;letter-spacing:3px;color:#22d3ee}
+.saldo{font-size:34px;font-weight:900;margin:6px 0;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.stat{padding:14px;border-radius:16px;border:1px solid var(--line);background:rgba(20,23,51,.7);color:var(--mu);font-size:13px}
+.stat b{display:block;font-size:26px;margin-top:4px;color:var(--tx)}
+label{display:block;font-weight:700;font-size:14px;margin:14px 0 8px}
+input{width:100%;padding:14px;border-radius:14px;border:1px solid var(--line);background:#080918;color:var(--tx);font-size:16px;outline:none}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.chip{padding:12px 0;border-radius:12px;border:1px solid var(--line);background:#141733;color:var(--tx);font-weight:700}
+.btn{display:block;width:100%;padding:15px;border-radius:14px;border:0;background:var(--grad);color:#fff;font-weight:800;font-size:16px;margin-top:16px}
+.btn.g{background:transparent;border:1px solid var(--line)}
+.btn:disabled{opacity:.5}
+.msg{font:13px ui-monospace,monospace;margin-top:12px;word-break:break-word;line-height:1.5}
+.ok{color:var(--ok)}.err{color:var(--err)}
+.hi{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.hi small{display:block;color:var(--mu);font:12px ui-monospace,monospace;margin-top:3px;word-break:break-all}
+.hint{color:var(--mu);font-size:13px;margin-top:8px;line-height:1.5}
+</style></head><body>
 
-<header class="top">
-  <div class="logo">W</div>
-  <div class="brand">WA <b>BOOSTER PRO</b></div>
-</header>
+<div class="top"><div class="logo">W</div><div class="brand">WA <b>BOOSTER PRO</b></div></div>
 
 <main>
-  <div class="eyebrow">Direct Injector</div>
-  <h1>Suntik Views WA</h1>
-  <p class="sub">Masukkan link saluran WhatsApp publik milikmu untuk menyuntikkan views secara otomatis.</p>
+<div class="card">
+  <div class="eyebrow">SALDO PANEL</div>
+  <div class="saldo" id="saldo">...</div>
+  <div class="hint" id="user"></div>
+  <button class="btn g" id="ref">Refresh saldo</button>
+</div>
 
-  <div class="card">
-    <label style="margin-top:0">Link Saluran WhatsApp</label>
-    <input type="text" id="lnk" placeholder="https://whatsapp.com/channel/..." autocapitalize="off" autocomplete="off">
-    <div class="hint">Pastikan saluran WhatsApp berstatus publik.</div>
+<div class="grid">
+  <div class="stat">Order sesi ini<b id="sUp">0</b></div>
+  <div class="stat">Berhasil<b id="sOk">0</b></div>
+</div>
 
-    <label>Jumlah Views</label>
-    <div class="chips">
-      <div class="chip" onclick="setQty(100)">100</div>
-      <div class="chip" onclick="setQty(500)">500</div>
-      <div class="chip" onclick="setQty(1000)">1000</div>
-      <div class="chip" onclick="setQty(5000)">5000</div>
-    </div>
-    <input type="number" id="qty" inputmode="numeric" placeholder="atau ketik jumlah sendiri" style="margin-top:10px">
-
-    <button class="btn" id="btnSend">⇧ Suntik Views Sekarang</button>
-    <div class="msg" id="msgBox"></div>
+<div class="card">
+  <h2>Suntik Member Saluran</h2>
+  <label style="margin-top:0">Link Saluran WhatsApp</label>
+  <input id="lnk" placeholder="https://whatsapp.com/channel/..." autocapitalize="off" autocomplete="off">
+  <div class="hint">Pastikan saluran berstatus publik.</div>
+  <label>Jumlah Member</label>
+  <div class="chips">
+    <button class="chip" data-q="100">100</button>
+    <button class="chip" data-q="500">500</button>
+    <button class="chip" data-q="1000">1000</button>
+    <button class="chip" data-q="5000">5000</button>
   </div>
+  <input id="qty" type="number" inputmode="numeric" placeholder="atau ketik jumlah sendiri" style="margin-top:10px">
+  <div class="hint" id="est">Min 10, maks 100.000</div>
+  <button class="btn" id="go">⇧ Suntik Member Sekarang</button>
+  <div class="msg" id="msg"></div>
+</div>
+
+<div class="card"><h2>Riwayat</h2><div id="hist"></div></div>
+
+<div class="card">
+  <h2>Settings</h2>
+  <label style="margin-top:0">API Key Nexro</label>
+  <input id="key" type="password" placeholder="Tempel API key di sini" autocomplete="off">
+  <div class="hint" id="keyHint"></div>
+  <button class="btn" id="saveKey">Simpan API key</button>
+  <button class="btn g" id="delKey">Hapus API key</button>
+</div>
 </main>
 
 <script>
-// ==========================================
-// ISI DATA PANEL SMM MILIKMU DI SINI
-// ==========================================
-const CONFIG = {
-  apiUrl: 'https://domain-panel-smm-kamu.com/api/v2', // Ganti dengan URL API Panel SMM
-  apiKey: 'ramcej)qyd)Gx6*Q1P',                  // Ganti dengan API Key akun Panel SMM
-  serviceId: '1234'                                   // Ganti dengan ID Layanan Views WA
+// ===== KONFIGURASI =====
+var CFG = {
+  base: 'https://nexro.my.id/api/v1',
+  serviceId: 225670,          // WhatsApp Channel Members [Turkey]
+  price: 11.134,              // Rp per 1 member (11.134 per 1000)
+  orderPath: '/order',        // TEBAKAN: cek URL endpoint Buat Pesanan di api-docs
+  fService: 'service',        // TEBAKAN: nama field ID layanan
+  fLink: 'link',              // TEBAKAN: nama field link
+  fQty: 'quantity'            // TEBAKAN: nama field jumlah
 };
+// =======================
 
-function setQty(val) {
-  document.getElementById('qty').value = val;
+var $ = function(s){return document.querySelector(s)};
+var stats = {up:0, ok:0};
+function ls(k,v){try{if(v===undefined)return localStorage.getItem('wb_'+k)||'';if(v===null)localStorage.removeItem('wb_'+k);else localStorage.setItem('wb_'+k,v)}catch(e){return ''}}
+function msg(t,ok){var m=$('#msg');m.textContent=t;m.className='msg '+(ok?'ok':'err')}
+function rp(n){return 'Rp '+Math.round(n).toLocaleString('id-ID')}
+
+function find(o,keys){
+  if(!o||typeof o!=='object')return undefined;
+  for(var i=0;i<keys.length;i++){if(o[keys[i]]!==undefined)return o[keys[i]]}
+  for(var k in o){var v=find(o[k],keys);if(v!==undefined)return v}
 }
 
-function showMsg(text, isOk) {
-  const box = document.getElementById('msgBox');
-  box.textContent = text;
-  box.className = 'msg ' + (isOk ? 'ok' : 'err');
-}
-
-document.getElementById('btnSend').onclick = async function() {
-  const link = document.getElementById('lnk').value.trim();
-  const qty = parseInt(document.getElementById('qty').value);
-  const btn = document.getElementById('btnSend');
-
-  if (!link || !/^https:\/\/(www\.)?whatsapp\.com\/channel\//.test(link)) {
-    return showMsg('Masukkan link saluran WhatsApp yang valid!', false);
-  }
-  if (!qty || qty < 10) {
-    return showMsg('Masukkan jumlah views minimal 10!', false);
-  }
-
-  btn.disabled = true;
-  showMsg('⏳ Memproses dan menyuntikkan views...', true);
-
-  try {
-    const bodyData = new URLSearchParams();
-    bodyData.append('key', CONFIG.apiKey);
-    bodyData.append('action', 'add');
-    bodyData.append('service', CONFIG.serviceId);
-    bodyData.append('link', link);
-    bodyData.append('quantity', qty);
-
-    // Menggunakan CORS Proxy agar request tidak diblokir GitHub Pages / Browser
-    const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(CONFIG.apiUrl);
-
-    const res = await fetch(proxyUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: bodyData.toString()
-    });
-
-    const data = await res.json();
-
-    if (data.order) {
-      showMsg('✓ Sukses! Views berhasil disuntikkan. Order ID: ' + data.order, true);
-      document.getElementById('lnk').value = '';
-      document.getElementById('qty').value = '';
-    } else if (data.error) {
-      showMsg('✗ Gagal dari SMM: ' + data.error, false);
-    } else {
-      showMsg('✗ Respon server provider tidak valid.', false);
+async function post(path, extra){
+  var key = ls('key');
+  if(!key) throw new Error('API key belum diisi (Settings di bawah).');
+  var body = JSON.stringify(Object.assign({api_key:key}, extra||{}));
+  var url = CFG.base + path, r;
+  try{
+    // 1) langsung ke Nexro
+    r = await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:body});
+  }catch(e){
+    // 2) fallback lewat proxy CORS (jika diblokir browser)
+    try{
+      r = await fetch('https://corsproxy.io/?'+encodeURIComponent(url),
+        {method:'POST',headers:{'Content-Type':'application/json'},body:body});
+    }catch(e2){
+      throw new Error('Tidak bisa terhubung ke Nexro. Cek internet / API key.');
     }
-  } catch (err) {
-    showMsg('✗ Gagal terhubung ke SMM. Pastikan apiUrl, apiKey, & serviceId di CONFIG sudah benar!', false);
-  } finally {
-    btn.disabled = false;
   }
+  var t = await r.text(), j;
+  try{j=JSON.parse(t)}catch(e){throw new Error('Respons bukan JSON: '+t.slice(0,150))}
+  return j;
+}
+
+async function loadSaldo(){
+  $('#saldo').textContent='...';
+  try{
+    var j = await post('/profile');
+    var b = find(j,['balance','saldo','sisa_saldo','credit']);
+    var u = find(j,['username','name','nama','email']);
+    $('#saldo').textContent = (b!==undefined && !isNaN(b)) ? rp(+b) : (b!==undefined ? String(b) : '?');
+    $('#user').textContent = u ? ('Akun: '+u) : (b===undefined ? JSON.stringify(j).slice(0,200) : '');
+  }catch(e){
+    $('#saldo').textContent='-';
+    $('#user').textContent=e.message;
+  }
+}
+
+function hist(){try{return JSON.parse(ls('hist')||'[]')}catch(e){return[]}}
+function renderHist(){
+  var box=$('#hist'), h=hist(); box.innerHTML='';
+  if(!h.length){box.innerHTML='<div class="hint" style="margin:0">Belum ada order.</div>';return}
+  h.forEach(function(e){
+    var d=document.createElement('div');d.className='hi';
+    d.textContent=e.qty+' member · Order #'+e.id;
+    var s=document.createElement('small');s.textContent=e.at+' · '+e.link;
+    d.appendChild(s);box.appendChild(d);
+  });
+}
+
+function upd(){
+  var q=parseInt($('#qty').value);
+  $('#est').textContent = q>=10 ? ('Perkiraan biaya: '+rp(q*CFG.price)) : 'Min 10, maks 100.000';
+}
+function keyHint(){
+  var has=!!ls('key');
+  $('#keyHint').textContent = has ? '✓ API key tersimpan di browser ini.' : 'Belum ada API key tersimpan.';
+  $('#key').placeholder = has ? '••••••••• (tersimpan)' : 'Tempel API key di sini';
+}
+
+document.querySelectorAll('.chip').forEach(function(c){
+  c.onclick=function(){$('#qty').value=c.dataset.q;upd()};
+});
+$('#qty').oninput=upd;
+$('#ref').onclick=loadSaldo;
+$('#saveKey').onclick=function(){
+  var k=$('#key').value.trim();
+  if(!k)return;
+  ls('key',k);$('#key').value='';keyHint();loadSaldo();
 };
+$('#delKey').onclick=function(){ls('key',null);keyHint();$('#saldo').textContent='-'};
+
+$('#go').onclick=async function(){
+  var link=$('#lnk').value.trim(), qty=parseInt($('#qty').value), btn=$('#go');
+  if(!/^https:\/\/(www\.)?whatsapp\.com\/channel\//.test(link))
+    return msg('Masukkan link saluran WhatsApp yang valid!',false);
+  if(!qty||qty<10||qty>100000)
+    return msg('Jumlah harus 10 sampai 100000!',false);
+
+  btn.disabled=true; msg('⏳ Memproses pesanan...',true);
+  try{
+    var data={}; data[CFG.fService]=CFG.serviceId; data[CFG.fLink]=link; data[CFG.fQty]=qty;
+    var j = await post(CFG.orderPath, data);
+    var id = find(j,['order','order_id','id']);
+    stats.up++;
+    if(id!==undefined && typeof id!=='object'){
+      stats.ok++;
+      msg('✓ Sukses! Order ID: '+id,true);
+      var h=hist();h.unshift({id:id,qty:qty,link:link,at:new Date().toLocaleString()});
+      ls('hist',JSON.stringify(h.slice(0,30)));renderHist();
+      $('#lnk').value='';$('#qty').value='';upd();loadSaldo();
+    }else{
+      msg('✗ '+(j.error||j.message||JSON.stringify(j)),false);
+    }
+  }catch(e){stats.up++;msg('✗ '+e.message,false)}
+  $('#sUp').textContent=stats.up;$('#sOk').textContent=stats.ok;
+  btn.disabled=false;
+};
+
+keyHint();renderHist();
+if(ls('key'))loadSaldo();else $('#saldo').textContent='-';
 </script>
-</body>
-</html>
+</body></html>
